@@ -1,0 +1,33 @@
+{
+  "name": "sotorko-mern",
+  "version": "1.0.0",
+  "main": "backend/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon backend/index.js",
+    "start": "node backend/index.js",
+    "generateDoc": "node backend/doc/swagger.js"
+  },
+  "keywords": [
+    "mern",
+    "full-stack"
+  ],
+  "author": "Touhedul Islam",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mailtrap": "^4.0.0",
+    "mongoose": "^8.10.2",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
