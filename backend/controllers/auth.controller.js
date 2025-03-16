@@ -23,8 +23,8 @@ export async function handleUserSignUp(req, res) {
 
     // Check if user already exists
     const userAlreadyExists = await User.findOne({ email });
-    console.log("User already exists : ", userAlreadyExists);
     if (userAlreadyExists) {
+      console.log("User already exists : ", userAlreadyExists);
       return res
         .status(400)
         .json({ message: "User already exists", success: false });
@@ -47,7 +47,8 @@ export async function handleUserSignUp(req, res) {
 
     await user.save();
 
-    await sendVerificationEmail(user.email, verificationToken);
+    // await sendVerificationEmail(user.email, verificationToken);
+    await sendVerificationEmail("touhedcs@gmail.com", verificationToken);
 
     return res.status(201).json({
       message: "User created successfully",
